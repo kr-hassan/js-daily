@@ -1,0 +1,289 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Js Fundamental</title>
+    <link rel="stylesheet" type="text/css" href="main.css">
+</head>
+<body>
+<section>
+    <div class="content">
+
+        <div class="header">
+            <h2> Js Fundamental</h2>
+        </div>
+        <div class="main-content">
+            <div id="show"></div>
+            <span id="hour"></span>:
+            <span id="min"></span>:
+            <span id="sec"></span>
+            <span id="zone"></span>
+            <!--            <button id="timer" onclick="countdownInit()"> Start Countdown</button>-->
+            <!--            <button onclick="stopTimer()"> Stop Countdown</button>-->
+
+
+            <!--            Our Content-->
+            <!--            <div1 id="myId"> Hi! I am the Text</div1>-->
+
+            <!--            <div>-->
+            <!--                <input type="text" id="codeText">-->
+            <!--                <button on="myEvent()">check</button>-->
+            <!--            </div>-->
+
+
+            <!--            <div id="show"></div>-->
+            <script>
+
+                /*Without Recursive 5!*/
+                //5! = 5*4*3*2*1
+             var num=   prompt('Want to get factorial Result?');
+
+                function fact(n) {
+                    if (n == 0) {
+                        return 1;
+
+                    } else {
+                        return n*fact(n-1);
+                        // var product =1;
+                        // for (i = 1; i <= num; i++) {
+                        //     product *= i;
+                        //
+                        // }
+                        // return product;
+                    }
+
+                }
+                document.write("The Result is "+fact(num));
+
+
+                // document.write(factorial(5));
+                /*Without Recursive 5! end*/
+
+
+                /*window object*/
+                // alert("Hi You are Here!")
+                // confirm("Are you Ok?")
+                // var name = prompt("Please Enter Your Name");
+                // if (name == '') {
+                //     alert('Name is Must');
+                //
+                // } else {
+                //     document.write("Name is "+ name);
+                // }
+
+                /*End window object*/
+
+
+                /*Index of*/
+                // var str = "Bangladesh is beautiful"
+                // var result =str.lastIndexOf();
+                // console.log(result)
+                /*Index of End*/
+
+
+                /*Time Clock*/
+
+
+                // function clock() {
+                // var date =new Date();
+                //
+                // var hour = date.getHours();
+                // var min = date.getMinutes();
+                // var sec = date.getSeconds();
+                // var ampm = date.toLocaleString('en-US', { hour: 'alphabetic', minute:'numeric', second:'numeric',
+                //     hour12:
+                // true })
+                //
+                // document.getElementById("hour").innerHTML = hour;
+                // document.getElementById("min").innerHTML = min;
+                // document.getElementById("sec").innerHTML = sec;
+                // document.getElementById("zone").innerHTML = ampm;
+                //
+                // console.log(
+                //     date.toLocaleString('en-US', { hour: 'numeric', hour12: true })
+                // );
+                // }
+
+                // setInterval(clock, 1000);
+
+                // document.getElementById("show").innerHTML= date;
+                /*Time Clock end*/
+
+
+                /*Interval Start*/
+                // var i = 0;
+                // var x = setInterval(function () {
+                //     i++;
+                //     alert("Like Me!")
+                //     if (i === 2) {
+                //         clearInterval(x);
+                //     }
+                // }, 3000)
+
+                /*Interval end*/
+
+
+
+                /*
+                * Count-down Timer
+                *
+                * */
+                // var countdownNumber = "";
+                //
+                // function countdownInit() {
+                //     countdownNumber = 21;
+                //     startTimer();
+                // }
+                //
+                // function startTimer() {
+                //     if (countdownNumber > 0) {
+                //         countdownNumber--;
+                //         document.getElementById("show").innerHTML = countdownNumber;
+                //         if (countdownNumber > 0) {
+                //             countdown = setTimeout("startTimer()", 1000);
+                //         }
+                //     }
+                //
+                // }
+                //
+                // function stopTimer() {
+                //     clearTimeout(countdown);
+                //     document.getElementById("show").innerHTML = "Time Stopped at " + countdownNumber;
+                // }
+
+
+                // var kick;
+                //
+                //  function myTimeout() {
+                //      document.getElementById("show").innerText = "Your time Triggered After 3 second";
+                //
+                //  }
+                //
+                //  function myTimer() {
+                //       kick = setTimeout("myTimeout()", 3000);
+                //      document.getElementById("show").innerHTML = "Your Time Started";
+                //
+                //  }
+                //
+                //  function kickTimeOut() {
+                //
+                //      clearTimeout(kick);
+                //      document.getElementById("show").innerHTML = "Your are Kicked for timeout";
+                //
+                //  }
+
+
+                // function myFunction() {
+                //     var str = "Bangladesh";
+                //     var res = str.substring(0, 4);
+                //     document.write(res);
+                //
+                // }
+
+                myFunction();
+                /*inheritance*/
+                // function productNum(a, b) {
+                //     this.x = a;
+                //     this.y = b;
+                //     this.product = function () {
+                //         return this.x * this.y;
+                //
+                //     }
+                // }
+                //
+                // var tn = new productNum(10, 18);
+                // console.log(tn.product());
+
+                /*end inheritance*/
+
+
+
+                // let div1= document.getElementById("myId").innerText;
+                // let div2= document.querySelector("div").innerText;
+                // let div3 = document.querySelectorAll("div")[0].innerText;
+                // console.log(div2);
+                // document.write(div1+ "<br/>"+div2+ "<br/>"+ div3 );
+
+                // function myEvent() {
+                //     console.log('Your Event is here!');
+                //
+                // }
+
+
+                // function codeCheck() {
+                //     var code = document.getElementById("codeText").value;
+                //     switch (code) {
+                //
+                //         case "java":
+                //             txt = 'Hi I am java';
+                //             break;
+                //
+                //         case "php":
+                //             txt = 'Hi I am php';
+                //             break;
+                //
+                //         default:
+                //             txt = 'I am default';
+                //             break;
+                //
+                //     }
+                //     document.getElementById("show").innerHTML = txt;
+                // }
+
+                // console.time("start");
+                // var a= "Kazi Rabbi";
+                // var b= "Hassan";
+                // var name= a+b;
+                //
+                // document.getElementById("show").innerHTML=name;
+                // console.timeEnd("start");
+                //
+                // var arr1 =[1,2,3,4,5];
+                // var arr2 =[4,5,5,7,8];
+                // var getarr= arr1.concat(arr2);
+                // console.log(getarr);
+                //
+                // var color =["green", "black", "red", "purple"];
+                // var fruit =["Orange", "Stowbery", "Apple", "Lemon"];
+                // var getarry=color.concat(fruit);
+                // console.log("Before Sort: "+ getarry);
+                // getarry.sort();
+                // console.log("After Sort:"+ getarry);
+                //
+                // var num = [80, 1580, 40, 60, 20, 10, 77, 11, 99];
+                //
+                // function compnum(x, y) {
+                //     return (x - y);
+                // }
+                //
+                // num.sort(compnum);
+                // console.log(num);
+                //
+                // var person = {
+                //     firstName: "Kazi Rabbi",
+                //     lastName: "Hassan",
+                //     func:function () {
+                //         return this.firstName+ " "+this.lastName;
+                //
+                //     }
+                // }
+                // console.log(person.func());
+
+                // for (i = 1; i <= 10; i++) {
+                //     console.log("2*" + i + "=" + i * 2);
+                // }
+
+            </script>
+        </div>
+
+        <div class="footer">
+            <h2>Training with live Project</h2>
+        </div>
+    </div>
+</section>
+
+</body>
+</html>
